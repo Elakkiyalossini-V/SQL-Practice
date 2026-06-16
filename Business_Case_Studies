@@ -1,1 +1,8 @@
+-- TOP CUSTOMERS BY REVENUE
 
+SELECT customer_name,
+       SUM(order_amount) AS total_revenue
+FROM orders
+GROUP BY customer_name
+ORDER BY total_revenue DESC
+LIMIT 5;
