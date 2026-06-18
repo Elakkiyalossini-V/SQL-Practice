@@ -7,3 +7,8 @@ FROM orders
 GROUP BY customer_name
 ORDER BY total_revenue DESC
 LIMIT 5;
+
+-- Number of orders from each city
+SELECT city, COUNT(*) AS total_orders
+FROM orders
+GROUP BY city;
